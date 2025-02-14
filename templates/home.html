@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-1/4 bg-gray-800 p-6">
+            <div class="bg-gray-900 p-4 rounded-lg">
+                <h2 class="text-lg font-bold mb-4"><i class="fas fa-clinic-medical"></i> Disease Prediction System</h2>
+                <ul>
+                    <li class="mb-2">
+                        <a href="{{url_for('diabetesprediction')}}" class="flex items-center p-2 bg-red-500 text-white rounded-lg">
+                            <i class="fas fa-virus mr-2"></i> Diabetes Prediction
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="{{url_for('heartdiseaseprediction')}}" class="flex items-center p-2 text-gray-400 hover:text-white">
+                            <i class="fas fa-heart mr-2"></i> Heart Disease Prediction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('prankinsonsdiseaseprediction')}}" class="flex items-center p-2 text-gray-400 hover:text-white">
+                            <i class="fas fa-user mr-2"></i> Parkinsons Prediction
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="w-3/4 p-10">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-3xl font-bold">Welcome to Disease Prediction System</h1>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <p class="text-gray-300">Select a prediction model from the sidebar to get started. Our system uses advanced machine learning algorithms to provide accurate health predictions.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

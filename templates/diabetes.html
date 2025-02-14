@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-1/4 bg-gray-800 p-6">
+            <div class="bg-gray-900 p-4 rounded-lg">
+                <h2 class="text-lg font-bold mb-4"><i class="fas fa-virus"></i> Prediction of Disease Outbreaks System</h2>
+                <ul>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-2 bg-red-500 text-white rounded-lg">
+                            <i class="fas fa-virus mr-2"></i> Diabetes Prediction
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="{{url_for('heartdiseaseprediction')}}" class="flex items-center p-2 text-gray-400 hover:text-white">
+                            <i class="fas fa-heart mr-2"></i> Heart Disease Prediction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('prankinsonsdiseaseprediction')}}" class="flex items-center p-2 text-gray-400 hover:text-white">
+                            <i class="fas fa-user mr-2"></i> Parkinsons Prediction
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="w-3/4 p-10">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-3xl font-bold">Diabetes Prediction using ML</h1>
+            </div>
+            <form action="{{url_for('diabetesprediction')}}" method="POST" class="grid grid-cols-3 gap-4">
+                <input type="number" name="Pregnancies" placeholder="Number of Pregnancies" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="Glucose" placeholder="Glucose Level" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="BloodPressure" placeholder="Blood Pressure" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="SkinThickness" placeholder="Skin Thickness" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="Insulin" placeholder="Insulin Level" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="BMI" placeholder="BMI Value" step="0.1" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function" step="0.001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="Age" placeholder="Age" required class="p-3 bg-gray-700 rounded-lg">
+                <button type="submit" class="col-span-3 p-3 bg-red-500 text-white rounded-lg hover:bg-red-600">Diabetes Test Result</button>
+            </form>
+            <div class="mt-4 p-3 bg-green-800 rounded-lg"></div>
+        </div>
+    </div>
+</body>
+</html>

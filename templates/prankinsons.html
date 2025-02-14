@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Disease Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-1/4 bg-gray-800 p-6">
+            <div class="bg-gray-900 p-4 rounded-lg">
+                <h2 class="text-lg font-bold mb-4"><i class="fas fa-user"></i> Prediction of Disease Outbreaks System</h2>
+                <ul>
+                    <li class="mb-2">
+                        <a href="{{url_for('diabetesprediction')}}" class="flex items-center p-2 text-gray-400 hover:text-white">
+                            <i class="fas fa-virus mr-2"></i> Diabetes Prediction
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="{{url_for('heartdiseaseprediction')}}" class="flex items-center p-2 text-gray-400 hover:text-white">
+                            <i class="fas fa-heart mr-2"></i> Heart Disease Prediction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 bg-red-500 text-white rounded-lg">
+                            <i class="fas fa-user mr-2"></i> Parkinsons Prediction
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="w-3/4 p-10">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-3xl font-bold">Parkinson's Disease Prediction using ML</h1>
+            </div>
+            <form action="{{url_for('prankinsonsdiseaseprediction')}}" method="POST" class="grid grid-cols-3 gap-4">
+                <input type="number" name="MDVP:Fo(Hz)" placeholder="MDVP:Fo(Hz)" step="0.01" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="MDVP:Fhi(Hz)" placeholder="MDVP:Fhi(Hz)" step="0.01" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="MDVP:Flo(Hz)" placeholder="MDVP:Flo(Hz)" step="0.01" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="MDVP:Jitter(%)" placeholder="MDVP:Jitter(%)" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="MDVP:Jitter(Abs)" placeholder="MDVP:Jitter(Abs)" step="0.00001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="MDVP:RAP" placeholder="MDVP:RAP" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="MDVP:PPQ" placeholder="MDVP:PPQ" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="Jitter:DDP" placeholder="Jitter:DDP" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="MDVP:Shimmer" placeholder="MDVP:Shimmer" step="0.01" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="MDVP:Shimmer(dB)" placeholder="MDVP:Shimmer(dB)" step="0.01" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="Shimmer:APQ3" placeholder="Shimmer:APQ3" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="Shimmer:APQ5" placeholder="Shimmer:APQ5" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="MDVP:APQ" placeholder="MDVP:APQ" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="Shimmer:DDA" placeholder="Shimmer:DDA" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="NHR" placeholder="NHR" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="HNR" placeholder="HNR" step="0.01" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="RPDE" placeholder="RPDE" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="DFA" placeholder="DFA" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="spread1" placeholder="spread1" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="spread2" placeholder="spread2" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="D2" placeholder="D2" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="PPE" placeholder="PPE" step="0.0001" required class="p-3 bg-gray-700 rounded-lg">
+                <button type="submit" class="col-span-3 p-3 bg-red-500 text-white rounded-lg hover:bg-red-600">Parkinson's Test Result</button>
+            </form>
+            <div class="mt-4 p-3 bg-green-800 rounded-lg"></div>
+        </div>
+    </div>
+</body>
+</html>

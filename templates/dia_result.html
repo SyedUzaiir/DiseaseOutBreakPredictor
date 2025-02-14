@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .result-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .result {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .buttons a {
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            color: white;
+            background-color: #007bff;
+            transition: background-color 0.3s;
+        }
+        .buttons a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <div class="result">
+            {% if result == 1 %}
+                <p>You are likely to have diabetes. Please consult a doctor.</p>
+            {% else %}
+                <p>You are unlikely to have diabetes. Maintain a healthy lifestyle.</p>
+            {% endif %}
+        </div>
+        <div class="buttons">
+            <a href="/heartdiseaseprediction">Try Again</a>
+            <a href="/">Home Page</a>
+        </div>
+    </div>
+</body>
+</html>

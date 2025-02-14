@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-1/4 bg-gray-800 p-6">
+            <div class="bg-gray-900 p-4 rounded-lg">
+                <h2 class="text-lg font-bold mb-4"><i class="fas fa-heartbeat"></i> Prediction of Disease Outbreaks System</h2>
+                <ul>
+                    <li class="mb-2">
+                        <a href="{{url_for('diabetesprediction')}}" class="flex items-center p-2 text-gray-400 hover:text-white">
+                            <i class="fas fa-virus mr-2"></i> Diabetes Prediction
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="flex items-center p-2 bg-red-500 text-white rounded-lg">
+                            <i class="fas fa-heart mr-2"></i> Heart Disease Prediction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('prankinsonsdiseaseprediction')}}" class="flex items-center p-2 text-gray-400 hover:text-white">
+                            <i class="fas fa-user mr-2"></i> Parkinsons Prediction
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="w-3/4 p-10">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-3xl font-bold">Heart Disease Prediction using ML</h1>
+            </div>
+            <form action="{{url_for('heartdiseaseprediction')}}" method="POST" class="grid grid-cols-3 gap-4">
+                <input type="number" name="age" placeholder="Age" min="29" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="sex" placeholder="Sex (1 = Male, 0 = Female)" min="0" max="1" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="cp" placeholder="Chest Pain Type (0–3)" min="0" max="3" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="trestbps" placeholder="Resting Blood Pressure" min="94" max="200" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="chol" placeholder="Cholesterol (mg/dL)" min="126" max="564" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="fbs" placeholder="Fasting Blood Sugar" min="0" max="1" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="restecg" placeholder="Resting ECG Results" min="0" max="2" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="thalach" placeholder="Max Heart Rate" min="71" max="202" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="exang" placeholder="Exercise Angina" min="0" max="1" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="oldpeak" placeholder="ST Depression" step="0.1" max="6.2" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="slope" placeholder="ST Segment Slope" min="0" max="2" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="ca" placeholder="Major Vessels" min="0" max="4" required class="p-3 bg-gray-700 rounded-lg">
+                <input type="number" name="thal" placeholder="Thalassemia" min="1" max="3" required class="p-3 bg-gray-700 rounded-lg">
+                <button type="submit" class="col-span-3 p-3 bg-red-500 text-white rounded-lg hover:bg-red-600">Heart Disease Test Result</button>
+            </form>
+            <div class="mt-4 p-3 bg-green-800 rounded-lg"></div>
+        </div>
+    </div>
+</body>
+</html>
