@@ -1,9 +1,11 @@
 DiseaseOutBreakPredictor
 
 Overview
+
 DiseaseOutBreakPredictor is a project aimed at predicting potential disease outbreaks using data analytics and machine learning. This tool can assist in early detection and prevention, helping communities prepare for and mitigate the impact of outbreaks.
 
 Features
+
 Predictive Analytics: Forecast potential disease outbreaks based on historical data.
 Interactive Dashboard: Visualize trends and predictions with an easy-to-use interface.
 Customizable Models: Adjust and fine-tune prediction parameters for your specific needs.
@@ -14,9 +16,12 @@ Installation
 Follow these steps to set up and run the project locally:
 
 Clone the repository:
+
 bash
+
 git clone https://github.com/SyedUzaiir/DiseaseOutBreakPredictor.git
 Navigate to the project directory:
+
 bash
 cd DiseaseOutBreakPredictor
 Install the required dependencies:
@@ -39,4 +44,5 @@ git checkout -b feature/YourFeatureName
 Commit your changes and push to your forked repository.
 Submit a pull request explaining your changes.
 License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
