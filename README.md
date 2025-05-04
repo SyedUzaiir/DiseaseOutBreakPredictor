@@ -1,4 +1,5 @@
 DiseaseOutBreakPredictor
+
 Overview
 DiseaseOutBreakPredictor is a project aimed at predicting potential disease outbreaks using data analytics and machine learning. This tool can assist in early detection and prevention, helping communities prepare for and mitigate the impact of outbreaks.
 
